@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "machine-learning-project-lionel-karl"
+version = "0.1.0"
+description = "Aspect-based sentiment labeling for Baby Products reviews"
+authors = ["Karl <karl.sondeji@gmail.com>"]
+packages = [{ include = "labeling", from = "src" }]
+package-mode = true
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = ">=2.0"
+transformers = ">=4.30"
+spacy = ">=3.7"
+pandas = ">=2.0"
+numpy = "*"
+tqdm = "*"
+scikit-learn = "*"
+matplotlib = "*"
+seaborn = "*"
+streamlit = "*"
+plotly = "*"
+datasets = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+mypy = "^1.13.0"
+pandas-stubs = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "src"
+packages = ["labeling"]
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
