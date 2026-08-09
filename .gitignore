@@ -11,3 +11,4 @@ __pycache__/
 .pytest_cache/
 dist/
 *.egg-info/
+Notes informatives sur le projet.docx

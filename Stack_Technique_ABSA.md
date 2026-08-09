@@ -23,7 +23,7 @@ Détail des outils, bibliothèques et frameworks nécessaires pour les phases 1 
 
 | Outil | Rôle |
 |---|---|
-| `datasets` (Hugging Face) | Accès direct aux datasets SemEval ABSA si disponibles sur le Hub |
+| `datasets` (Hugging Face) | Accès direct aux datasets Amazon Reviews 2023|
 | `pandas` | Manipulation tabulaire, dédoublonnage, exploration |
 | `requests` / `beautifulsoup4` | Si scraping complémentaire nécessaire (ex. Yelp, Amazon Reviews hors dataset officiel) |
 | `re` (stdlib) | Nettoyage regex (caractères spéciaux, HTML résiduel) |
@@ -32,7 +32,7 @@ Détail des outils, bibliothèques et frameworks nécessaires pour les phases 1 
 | `unicodedata` (stdlib) | Normalisation des caractères (accents, encodages) |
 | `matplotlib` / `seaborn` | Visualisation exploratoire (distribution des aspects, longueur des avis, classes déséquilibrées) |
 
-**Point de vigilance technique** : si le dataset choisi (SemEval, Amazon Reviews, Yelp Open Dataset) n'a pas nativement de labels par aspect au format exploitable, il faudra un format d'annotation intermédiaire — typiquement JSON avec structure `{"text": ..., "aspects": [{"term": ..., "sentiment": ...}]}`.
+**Point de vigilance technique** : si le dataset choisi (Amazon Reviews) n'a pas nativement de labels par aspect au format exploitable, il faudra un format d'annotation intermédiaire — typiquement JSON avec structure `{"text": ..., "aspects": [{"term": ..., "sentiment": ...}]}`.
 
 ---
 
