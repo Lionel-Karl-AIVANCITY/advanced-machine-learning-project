@@ -1,5 +1,5 @@
 documents privés/
-Data/
+data/
 *.txt
 *.xlsx
 *.json
@@ -11,4 +11,6 @@ __pycache__/
 .pytest_cache/
 dist/
 *.egg-info/
+bert_outputs/best_model_state.pt
+bert_outputs_smoke/best_model_state.pt
 Notes informatives sur le projet.docx
