@@ -242,6 +242,7 @@ def load_dataset(
     max_reviews: int | None = None,
     min_aspect_score: float | None = None,
     drop_weak: bool = False,
+    drop_neutral: bool = True,
     seed: int = RANDOM_SEED,
 ) -> pd.DataFrame:
     print(f"Chargement de {input_path}")
@@ -265,6 +266,15 @@ def load_dataset(
         before = len(df)
         df = df[~df["aspect_weak"].astype(bool)]
         print(f"[filter] {before - len(df)} lignes retirees (aspect_weak=True)")
+
+    # Classification binaire : on ne garde que positive / negative
+    if drop_neutral:
+        before = len(df)
+        df = df[df[COL_SENTIMENT].isin(["positive", "negative"])]
+        print(
+            f"[filter] {before - len(df)} lignes retirees "
+            f"(sentiment hors {{positive, negative}})"
+        )
 
     if max_reviews is not None:
         groups = (
@@ -305,6 +315,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Retire les lignes avec aspect_weak=True",
     )
+    p.add_argument(
+        "--keep-neutral",
+        action="store_true",
+        help="Conserve les lignes 'neutral' (desactive par defaut le filtre binaire)",
+    )
     p.add_argument("--seed", type=int, default=RANDOM_SEED)
     p.add_argument("--min-freq", type=int, default=2)
     p.add_argument("--max-vocab", type=int, default=20000)
@@ -320,6 +335,7 @@ def main() -> None:
         max_reviews=args.max_reviews,
         min_aspect_score=args.min_aspect_score,
         drop_weak=args.drop_weak,
+        drop_neutral=not args.keep_neutral,
         seed=args.seed,
     )
 

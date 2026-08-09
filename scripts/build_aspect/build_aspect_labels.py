@@ -75,8 +75,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--neutral-threshold",
         type=float,
-        default=0.70,
-        help="Sous ce score SST-2 -> polarite 'neutral'",
+        default=None,
+        help="Ignore (polarite binaire positive/negative uniquement)",
     )
     p.add_argument("--top-k-aspects", type=int, default=2)
     p.add_argument("--zs-batch-size", type=int, default=4)
