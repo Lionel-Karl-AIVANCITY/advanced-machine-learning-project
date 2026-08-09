@@ -157,28 +157,29 @@ def assign_aspects_batch(
 def score_to_polarity(
     label: str,
     score: float,
-    neutral_threshold: float = 0.70,
+    neutral_threshold: float | None = None,
 ) -> tuple[str, float]:
-    """Mappe SST-2 (POSITIVE/NEGATIVE) vers positif / négatif / neutre.
+    """Mappe SST-2 (POSITIVE/NEGATIVE) vers positive / negative (binaire).
 
-    Si la confiance est faible (< neutral_threshold), on assigne 'neutral'.
+    ``neutral_threshold`` est ignore (conserve pour compatibilite CLI) :
+    on ne produit plus jamais de classe 'neutral'.
     """
+    del neutral_threshold  # binaire strict
     lab = label.upper()
-    if score < neutral_threshold:
-        return "neutral", float(score)
     if lab in {"POSITIVE", "POS", "LABEL_1"}:
         return "positive", float(score)
     if lab in {"NEGATIVE", "NEG", "LABEL_0"}:
         return "negative", float(score)
-    return "neutral", float(score)
+    # Fallback rare : label inattendu -> negative plutot que neutral
+    return "negative", float(score)
 
 
 def assign_sentiment(
     sent_pipe: Any,
     sentence: str,
-    neutral_threshold: float = 0.70,
+    neutral_threshold: float | None = None,
 ) -> dict[str, float | str]:
-    """Pseudo-label de polarité pour une phrase."""
+    """Pseudo-label de polarite binaire pour une phrase."""
     out = sent_pipe(sentence)[0]
     polarity, conf = score_to_polarity(
         out["label"], float(out["score"]), neutral_threshold=neutral_threshold
@@ -193,10 +194,10 @@ def assign_sentiment(
 def assign_sentiment_batch(
     sent_pipe: Any,
     sentences: list[str],
-    neutral_threshold: float = 0.70,
+    neutral_threshold: float | None = None,
     batch_size: int = 32,
 ) -> list[dict[str, float | str]]:
-    """Version batch du classifieur de sentiment."""
+    """Version batch du classifieur de sentiment (positive/negative uniquement)."""
     outputs = sent_pipe(sentences, batch_size=batch_size)
     results: list[dict[str, float | str]] = []
     for out in outputs:
