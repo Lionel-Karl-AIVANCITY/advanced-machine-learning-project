@@ -1,0 +1,11 @@
+review_idx,sentence_idx,aspect,sentence,true_label,baseline_pred,bert_pred,category,n_words,has_negation_marker
+8167,1,"ease of use, assembly and convenience",It has a little a two in one bath spout cover and bubble maker.,negative,negative,positive,bert_introduces_new_error,14,False
+1584,3,"durability, washability and longevity",They don't break if dropped.,positive,positive,negative,bert_introduces_new_error,5,True
+4344,6,safety for babies and children,You just put her in it and Velcro and you are done.,positive,positive,negative,bert_introduces_new_error,12,False
+1584,3,product quality and performance,They don't break if dropped.,positive,positive,negative,bert_introduces_new_error,5,True
+8167,0,safety for babies and children,"What makes this set different, is that it is for older babies that can sit up and play in the tub (always with an adult supervising).",positive,positive,negative,bert_introduces_new_error,26,False
+1584,8,product quality and performance,"If they were a little firmer or a little more narrow, I feel like we wouldn't have as many squeeze and spill issues.",negative,negative,positive,bert_introduces_new_error,23,True
+8167,1,"comfort, softness and texture",It has a little a two in one bath spout cover and bubble maker.,negative,negative,positive,bert_introduces_new_error,14,False
+2487,0,product quality and performance,Okay I haven't officially used it yet.,negative,negative,positive,bert_introduces_new_error,7,True
+1584,8,"size, dimensions and fit","If they were a little firmer or a little more narrow, I feel like we wouldn't have as many squeeze and spill issues.",negative,negative,positive,bert_introduces_new_error,23,True
+5274,0,safety for babies and children,"I use this in my baby's car seat and jogging stroller, and it works fabulous!",positive,positive,negative,bert_introduces_new_error,15,False

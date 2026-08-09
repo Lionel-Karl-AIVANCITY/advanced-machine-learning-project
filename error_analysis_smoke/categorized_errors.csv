@@ -1,0 +1,65 @@
+review_idx,sentence_idx,aspect,sentence,true_label,baseline_pred,bert_pred,category,n_words,has_negation_marker
+1584,0,"design, appearance and looks",These are the cutest little cups.,positive,negative,positive,bert_fixes_baseline_error,6,False
+1584,0,"comfort, softness and texture",These are the cutest little cups.,positive,negative,positive,bert_fixes_baseline_error,6,False
+1584,1,"design, appearance and looks",My kids love them.,positive,negative,positive,bert_fixes_baseline_error,4,False
+1584,1,product quality and performance,My kids love them.,positive,negative,positive,bert_fixes_baseline_error,4,False
+1584,2,"design, appearance and looks",The colors and pictures on the cups are darling.,positive,negative,positive,bert_fixes_baseline_error,9,False
+1584,3,product quality and performance,They don't break if dropped.,positive,positive,negative,bert_introduces_new_error,5,True
+1584,3,"durability, washability and longevity",They don't break if dropped.,positive,positive,negative,bert_introduces_new_error,5,True
+1584,4,"size, dimensions and fit",But they feel like big kid cups because they have no lids.,negative,positive,negative,bert_fixes_baseline_error,12,True
+1584,4,"comfort, softness and texture",But they feel like big kid cups because they have no lids.,negative,positive,negative,bert_fixes_baseline_error,12,True
+1584,6,safety for babies and children,"So, little hands trying very hard to manage with one hand squeeze the cup and spill the contents.",negative,negative,negative,both_correct,18,False
+1584,7,"size, dimensions and fit","They are a little wide for my 4 and 5 year olds to use one hand, but they insist on trying anyway.",positive,negative,positive,bert_fixes_baseline_error,22,True
+1584,7,safety for babies and children,"They are a little wide for my 4 and 5 year olds to use one hand, but they insist on trying anyway.",positive,negative,negative,both_wrong,22,True
+1584,8,product quality and performance,"If they were a little firmer or a little more narrow, I feel like we wouldn't have as many squeeze and spill issues.",negative,negative,positive,bert_introduces_new_error,23,True
+1584,8,"size, dimensions and fit","If they were a little firmer or a little more narrow, I feel like we wouldn't have as many squeeze and spill issues.",negative,negative,positive,bert_introduces_new_error,23,True
+2053,2,customer service and seller support,"They sent me a high chair that had obviously been returned, likely for my same complaints.",negative,negative,negative,both_correct,16,False
+2053,2,"design, appearance and looks","They sent me a high chair that had obviously been returned, likely for my same complaints.",negative,negative,negative,both_correct,16,False
+2053,3,safety for babies and children,"So, I'll return this, and they'll probably send it to the next unsuspecting victim. I've been raising kids for 30 years, now grandkids, and trusted Graco.",negative,negative,negative,both_correct,26,False
+2053,3,customer service and seller support,"So, I'll return this, and they'll probably send it to the next unsuspecting victim. I've been raising kids for 30 years, now grandkids, and trusted Graco.",negative,negative,negative,both_correct,26,False
+2487,0,product quality and performance,Okay I haven't officially used it yet.,negative,negative,positive,bert_introduces_new_error,7,True
+2487,1,product quality and performance,"But after washing it, it held up very nice and the fabric is VERY SOFT.",positive,positive,positive,both_correct,15,True
+2487,1,"durability, washability and longevity","But after washing it, it held up very nice and the fabric is VERY SOFT.",positive,positive,positive,both_correct,15,True
+2487,1,"comfort, softness and texture","But after washing it, it held up very nice and the fabric is VERY SOFT.",positive,positive,positive,both_correct,15,True
+2487,2,"ease of use, assembly and convenience",I am excited to use this when the babe arrives.,positive,negative,positive,bert_fixes_baseline_error,10,False
+2487,2,product quality and performance,I am excited to use this when the babe arrives.,positive,positive,positive,both_correct,10,False
+3364,0,safety for babies and children,this support keeps my sons head from rolling to the sides when he sleeps.,positive,negative,negative,both_wrong,14,False
+3364,0,product quality and performance,this support keeps my sons head from rolling to the sides when he sleeps.,positive,negative,negative,both_wrong,14,False
+4344,0,"comfort, softness and texture",We have an infant daughter and she likes to be swaddled.,positive,positive,positive,both_correct,11,False
+4344,0,safety for babies and children,We have an infant daughter and she likes to be swaddled.,positive,positive,positive,both_correct,11,False
+4344,2,safety for babies and children,Swaddling with a regular blanket can be tricky.,negative,negative,negative,both_correct,8,False
+4344,4,safety for babies and children,It can also be an issue because you are not supposed to put a blanket in with the baby in the crib. I liked these.,positive,negative,negative,both_wrong,25,True
+4344,4,"comfort, softness and texture",It can also be an issue because you are not supposed to put a blanket in with the baby in the crib. I liked these.,positive,positive,positive,both_correct,25,True
+4344,5,"ease of use, assembly and convenience",It made it so much easier to swaddle her.,positive,negative,negative,both_wrong,9,False
+4344,5,product quality and performance,It made it so much easier to swaddle her.,positive,negative,negative,both_wrong,9,False
+4344,6,"ease of use, assembly and convenience",You just put her in it and Velcro and you are done.,positive,positive,positive,both_correct,12,False
+4344,6,safety for babies and children,You just put her in it and Velcro and you are done.,positive,positive,negative,bert_introduces_new_error,12,False
+4344,9,"comfort, softness and texture",This seemed to calm her down.,negative,negative,negative,both_correct,6,False
+4344,10,"ease of use, assembly and convenience",It's nice that it comes in a set of two.,positive,positive,positive,both_correct,10,False
+4344,10,"design, appearance and looks",It's nice that it comes in a set of two.,positive,positive,positive,both_correct,10,False
+4344,11,"design, appearance and looks",They were soft and had nice designs.,positive,positive,positive,both_correct,7,False
+4344,11,"comfort, softness and texture",They were soft and had nice designs.,positive,positive,positive,both_correct,7,False
+4344,12,"design, appearance and looks","These colors are nice because they are neutral, but still cute, especially the print.",positive,negative,positive,bert_fixes_baseline_error,14,True
+4344,12,"comfort, softness and texture","These colors are nice because they are neutral, but still cute, especially the print.",positive,negative,positive,bert_fixes_baseline_error,14,True
+4344,13,"durability, washability and longevity",It's good for someone who doesn't know the gender or for someone who is planning on having more kids and would like it to last longer.,positive,negative,positive,bert_fixes_baseline_error,26,True
+4344,13,product quality and performance,It's good for someone who doesn't know the gender or for someone who is planning on having more kids and would like it to last longer.,positive,negative,positive,bert_fixes_baseline_error,26,True
+4344,14,"design, appearance and looks",I also think this would make a nice shower gift.,positive,positive,positive,both_correct,10,False
+4344,15,"comfort, softness and texture",I like that it is organic cotton.,positive,positive,positive,both_correct,7,False
+4344,15,product quality and performance,I like that it is organic cotton.,positive,positive,positive,both_correct,7,False
+4344,16,"design, appearance and looks",I think it makes them a little nicer.,positive,positive,positive,both_correct,8,False
+4344,16,"comfort, softness and texture",I think it makes them a little nicer.,positive,negative,positive,bert_fixes_baseline_error,8,False
+4344,17,product quality and performance,I would recommend them.,positive,positive,positive,both_correct,4,False
+5274,0,product quality and performance,"I use this in my baby's car seat and jogging stroller, and it works fabulous!",positive,positive,positive,both_correct,15,False
+5274,0,safety for babies and children,"I use this in my baby's car seat and jogging stroller, and it works fabulous!",positive,positive,negative,bert_introduces_new_error,15,False
+5274,1,product quality and performance,I highly recommend it!,positive,positive,positive,both_correct,4,False
+7580,0,product quality and performance,This is awful I could not even open it to set it up directions no help my fingers became sore,negative,positive,negative,bert_fixes_baseline_error,20,True
+7968,0,"design, appearance and looks",Love these cups,positive,negative,positive,bert_fixes_baseline_error,3,False
+7968,0,"comfort, softness and texture",Love these cups,positive,negative,positive,bert_fixes_baseline_error,3,False
+8167,0,safety for babies and children,"What makes this set different, is that it is for older babies that can sit up and play in the tub (always with an adult supervising).",positive,positive,negative,bert_introduces_new_error,26,False
+8167,1,"ease of use, assembly and convenience",It has a little a two in one bath spout cover and bubble maker.,negative,negative,positive,bert_introduces_new_error,14,False
+8167,1,"comfort, softness and texture",It has a little a two in one bath spout cover and bubble maker.,negative,negative,positive,bert_introduces_new_error,14,False
+8167,2,safety for babies and children,"You also get baby wash & shampoo, baby lotion, baby bubble bath, cleansing cloths, and diaper rash cream.",negative,positive,negative,bert_fixes_baseline_error,18,False
+8476,0,"design, appearance and looks",I actually bought this for for pit bull puppy because we be going into her first heat soon,positive,negative,positive,bert_fixes_baseline_error,18,False
+8476,1,safety for babies and children,and I didn't want her bleeding all over the house.,negative,negative,negative,both_correct,10,True
+8476,2,"price, cost and value for money",I heard this was better then buying doggie diapers and cheaper.,negative,positive,negative,bert_fixes_baseline_error,11,False
+8476,2,product quality and performance,I heard this was better then buying doggie diapers and cheaper.,negative,positive,positive,both_wrong,11,False
