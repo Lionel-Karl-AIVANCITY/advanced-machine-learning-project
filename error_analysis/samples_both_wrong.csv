@@ -1,0 +1,21 @@
+review_idx,sentence_idx,aspect,sentence,true_label,baseline_pred,bert_pred,category,n_words,has_negation_marker
+1683,0,"size, dimensions and fit",This infant insert fits all Ergo soft-structured carriers.,negative,positive,positive,both_wrong,8,False
+1450,0,"comfort, softness and texture",This is a great sleeper sack!,negative,positive,positive,both_wrong,6,False
+5722,0,product quality and performance,Bought this for an adult to use as a cup in the bathroom and it fits the bill for rinsing your mouth or swallowing a pill.,negative,positive,positive,both_wrong,26,False
+8344,2,safety for babies and children,It kept him safe and he could crawl out when ready.,negative,positive,positive,both_wrong,11,False
+8120,0,"ease of use, assembly and convenience","If you have little ones, they will like being able to use this step stool with support handles to reach the counter by themselves.",negative,positive,positive,both_wrong,24,False
+6318,8,product quality and performance,I like the feel of the lotion and don't mind the unscented scent.,negative,positive,positive,both_wrong,13,True
+7401,1,"size, dimensions and fit",I like that I can put the entree in the big part and the fruit/veggies in the smaller compartments.,positive,negative,negative,both_wrong,19,False
+5037,5,"ease of use, assembly and convenience",It also has a strap that lets you secure it across your chest to take some weight of your shoulders and evenly distribute it and make the weight less impactful.,negative,positive,positive,both_wrong,30,False
+1536,1,product quality and performance,"They are cozy, but lightweight.",positive,negative,negative,both_wrong,5,True
+4329,2,safety for babies and children,So many of the diaper bags are so babyish that you really can't use them when you don't have a baby.,positive,negative,negative,both_wrong,21,True
+2071,2,"size, dimensions and fit",I would be aware of the sizing of these.,positive,negative,negative,both_wrong,9,False
+8344,2,product quality and performance,It kept him safe and he could crawl out when ready.,negative,positive,positive,both_wrong,11,False
+4730,3,product quality and performance,so it's easy for your child to carry from place to place.,negative,positive,positive,both_wrong,12,False
+6293,1,"design, appearance and looks",Boy Blue from Disney's Glidden paint collection.,negative,positive,positive,both_wrong,7,False
+3778,0,safety for babies and children,[[VIDEOID:39fc9b338845f4ed7ff7c740028da0f7]] This is a take anywhere light stroller.,positive,negative,negative,both_wrong,8,False
+5628,17,"comfort, softness and texture","The brush is a bit too soft to clean as well as my other bottle brush, but the rubbery parts do help it some",negative,positive,positive,both_wrong,24,True
+6834,1,product quality and performance,"Got this to keep my puppy in certain rooms, and she learned how to jump it, move it and get around it in less than a month.",positive,negative,negative,both_wrong,27,False
+1595,2,"comfort, softness and texture",This doesn't bother her sensitive skin at all.,negative,positive,positive,both_wrong,8,True
+2891,1,product quality and performance,I bought 2 for baby shower gifts (was a hit at both showers).,negative,positive,positive,both_wrong,13,False
+5595,7,"comfort, softness and texture",I think it would be fine for a newborn,negative,positive,positive,both_wrong,9,False
