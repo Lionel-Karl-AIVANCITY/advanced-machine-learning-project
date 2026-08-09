@@ -102,6 +102,8 @@ def annotate_sentences(
 
             for row, aspects, sentiment in zip(chunk, aspects_per_sent, sentiments):
                 for asp in aspects:
+                    if float(asp["aspect_score"]) < 0.7 : # aspect_threshold:
+                        continue
                     item = {
                         "review_idx": row["review_idx"],
                         "sentence_idx": row["sentence_idx"],
