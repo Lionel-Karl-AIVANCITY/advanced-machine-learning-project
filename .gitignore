@@ -1,5 +1,10 @@
 documents privés/
 data/
+baseline_outputs_smoke/
+data_splits_smoke/
+bert_outputs_smoke/
+error_analysis_smoke/
+
 *.txt
 *.xlsx
 *.json
