@@ -73,19 +73,42 @@ def load_model():
     if not ckpt_path.exists():
         raise FileNotFoundError(
             f"Checkpoint introuvable: {ckpt_path}. "
-            "Entrainement requis (scripts/data_train/train_bert.py)."
+            "Entrainement requis (src/train_bert.py) ou git lfs pull."
         )
     if not tok_dir.exists():
         raise FileNotFoundError(f"Tokenizer introuvable: {tok_dir}")
 
     checkpoint = torch.load(ckpt_path, map_location=DEVICE, weights_only=False)
-    tokenizer = AutoTokenizer.from_pretrained(tok_dir)
-    model = AutoModelForSequenceClassification.from_pretrained(
-        checkpoint["model_name"], num_labels=len(checkpoint["label2id"])
-    ).to(DEVICE)
+    tokenizer = AutoTokenizer.from_pretrained(tok_dir, local_files_only=True)
+    label2id = checkpoint["label2id"]
+    id2label = {v: k for k, v in label2id.items()}
+    num_labels = len(label2id)
+
+    # Prefer a fully local HF export if present; else Hub; else bert-base config
+    # (no download — needed when huggingface.co is unreachable).
+    local_export = BERT_DIR / "hf_model"
+    if (local_export / "config.json").exists():
+        model = AutoModelForSequenceClassification.from_pretrained(
+            local_export, local_files_only=True
+        )
+    else:
+        try:
+            model = AutoModelForSequenceClassification.from_pretrained(
+                checkpoint["model_name"], num_labels=num_labels
+            )
+        except OSError:
+            from transformers import BertConfig, BertForSequenceClassification
+
+            config = BertConfig(
+                num_labels=num_labels,
+                id2label={int(i): lab for i, lab in id2label.items()},
+                label2id=label2id,
+            )
+            model = BertForSequenceClassification(config)
+
     model.load_state_dict(checkpoint["model_state_dict"])
+    model.to(DEVICE)
     model.eval()
-    id2label = {v: k for k, v in checkpoint["label2id"].items()}
     return model, tokenizer, id2label, checkpoint["max_len"]
 
 
