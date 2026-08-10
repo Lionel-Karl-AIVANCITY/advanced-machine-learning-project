@@ -1,0 +1,4 @@
+length_bucket,taux_erreur_bert,n_exemples
+court (<=8 mots),0.04685890834191555,1942
+long (>20 mots),0.09281767955801105,905
+moyen (9-20 mots),0.0804555473916238,2722
