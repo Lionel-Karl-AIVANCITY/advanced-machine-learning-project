@@ -1,8 +1,0 @@
-review_idx,sentence_idx,aspect,sentence,true_label,baseline_pred,bert_pred,category,n_words,has_negation_marker
-1584,7,safety for babies and children,"They are a little wide for my 4 and 5 year olds to use one hand, but they insist on trying anyway.",positive,negative,negative,both_wrong,22,True
-3364,0,safety for babies and children,this support keeps my sons head from rolling to the sides when he sleeps.,positive,negative,negative,both_wrong,14,False
-4344,5,product quality and performance,It made it so much easier to swaddle her.,positive,negative,negative,both_wrong,9,False
-3364,0,product quality and performance,this support keeps my sons head from rolling to the sides when he sleeps.,positive,negative,negative,both_wrong,14,False
-4344,5,"ease of use, assembly and convenience",It made it so much easier to swaddle her.,positive,negative,negative,both_wrong,9,False
-4344,4,safety for babies and children,It can also be an issue because you are not supposed to put a blanket in with the baby in the crib. I liked these.,positive,negative,negative,both_wrong,25,True
-8476,2,product quality and performance,I heard this was better then buying doggie diapers and cheaper.,negative,positive,positive,both_wrong,11,False

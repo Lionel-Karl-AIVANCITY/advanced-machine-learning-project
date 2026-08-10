@@ -1,0 +1,12 @@
+torch>=2.0
+transformers>=4.30
+spacy>=3.7
+pandas>=2.0
+numpy
+tqdm
+scikit-learn
+matplotlib
+seaborn
+streamlit
+plotly
+datasets

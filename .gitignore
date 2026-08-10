@@ -1,16 +1,77 @@
+# ---------------------------------------------------------------------------
+# Donnees brutes / derivees (ne pas committer — volume + licence Amazon)
+# ---------------------------------------------------------------------------
+data/raw/
+data/splits/
+Data/
+data_splits/
+data_splits_smoke/
+*.jsonl
+
+# Autoriser uniquement le petit echantillon de demo
+!data/samples/
+!data/samples/**
+!data/README.md
+
+# ---------------------------------------------------------------------------
+# Artefacts smoke (tests locaux uniquement)
+# ---------------------------------------------------------------------------
+*_smoke/
+*_smoke/**
+*smoke*/
+baseline_outputs_smoke/
+bert_outputs_smoke/
+error_analysis_smoke/
+data_splits_smoke/
+
+# ---------------------------------------------------------------------------
+# Modeles lourds (BERT ~400 Mo) — le baseline .pt peut etre versionne
+# ---------------------------------------------------------------------------
+models/bert/best_model_state.pt
+models/bert/*.pt
+bert_outputs/
+bert_outputs/**
+baseline_output/
+baseline_outputs/
+
+# ---------------------------------------------------------------------------
+# Outputs volumineux / regenerables (garder structure, ignorer gros CSV)
+# ---------------------------------------------------------------------------
+outputs/error_analysis/categorized_errors.csv
+outputs/error_analysis/Excel/
+
+# ---------------------------------------------------------------------------
+# Documents prives / temporaires
+# ---------------------------------------------------------------------------
 documents privés/
-data/
-*.txt
-*.xlsx
-*.json
+documents prives/
+~$*.docx
+~$*.xlsx
+*.tmp
+Notes informatives sur le projet.docx
+notes advanced ml project.txt
+dust_absa.txt
+Les aspects.xlsx
+
+# ---------------------------------------------------------------------------
+# Python / env
+# ---------------------------------------------------------------------------
 .venv/
+venv/
 __pycache__/
 *.pyc
+*.pyo
 .ipynb_checkpoints/
 .mypy_cache/
 .pytest_cache/
 dist/
 *.egg-info/
-bert_outputs/best_model_state.pt
-bert_outputs_smoke/best_model_state.pt
-Notes informatives sur le projet.docx
+.poetry/
+poetry.lock
+
+# Ancienne arborescence scripts (si encore presente localement)
+scripts/
+
+# OS
+.DS_Store
+Thumbs.db
