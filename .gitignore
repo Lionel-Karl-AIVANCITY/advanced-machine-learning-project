@@ -25,14 +25,26 @@ error_analysis_smoke/
 data_splits_smoke/
 
 # ---------------------------------------------------------------------------
-# Modeles lourds (BERT ~400 Mo) — le baseline .pt peut etre versionne
+# Modeles
+# - baseline best_model.pt (~6 Mo) : VERSIONNE (demo sans re-entrainement)
+# - BERT best_model_state.pt (~400 Mo) : non versionne (ou Git LFS)
 # ---------------------------------------------------------------------------
-models/bert/best_model_state.pt
-models/bert/*.pt
+models/bert/**
+!models/bert/.gitkeep
+!models/bert/tokenizer/
+!models/bert/tokenizer/**
+
+# Anciens dossiers de sorties modeles
 bert_outputs/
 bert_outputs/**
 baseline_output/
 baseline_outputs/
+
+# Garantir que le checkpoint baseline reste trackable
+!models/baseline/
+!models/baseline/**
+models/baseline/*.pt
+!models/baseline/best_model.pt
 
 # ---------------------------------------------------------------------------
 # Outputs volumineux / regenerables (garder structure, ignorer gros CSV)
