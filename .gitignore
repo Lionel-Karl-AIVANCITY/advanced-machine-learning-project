@@ -3,12 +3,13 @@
 # ---------------------------------------------------------------------------
 data/raw/
 data/splits/
-Data/
+# Ne pas ignorer "Data/" : sous Windows/macOS, Git est souvent
+# case-insensitive et "Data/" bloquerait aussi "data/samples/".
 data_splits/
 data_splits_smoke/
 *.jsonl
 
-# Autoriser uniquement le petit echantillon de demo
+# Petit echantillon de demo (versionne)
 !data/samples/
 !data/samples/**
 !data/README.md
