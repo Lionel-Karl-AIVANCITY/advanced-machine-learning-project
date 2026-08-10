@@ -41,6 +41,10 @@ L'application s'ouvre dans le navigateur avec deux modes :
 
 Un petit échantillon prêt à l'emploi pour tester le mode batch est fourni dans `data/samples/testing_demo_example.csv`.
 
+## Notebook central
+
+Un notebook central reprennant lles notions principales ainsi que les étapes clés du projet est  disponible dans `docs/notebook/models_overview_analysis.ipynb`. Ce notebook vous permettra de mieux comprendre les concepts derrière ce projets, les motivations des différents chois réalisés et les résultats obtenus.
+
 ## Structure du dépôt
 
 ```
@@ -70,6 +74,7 @@ Machine-learning-project-lionel-karl/
 │   ├── bert/
 │   └── error_analysis/
 ├── docs/
+│   └── notebooks/                 # notebook complet présentant les modèles et les résultats
 └── report/
 ```
 
