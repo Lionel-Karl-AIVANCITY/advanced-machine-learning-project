@@ -47,7 +47,9 @@ Un notebook central reprennant lles notions principales ainsi que les étapes cl
 
 ## Demo live
 
-![Run demo du streamlit](report\screenshots\streamlit_ml_ABSA.gif)
+**Lancement complet du projet**
+
+![Run demo du streamlit](report/screenshots/streamlit_ml_ABSA.gif)
 
 
 ## Structure du dépôt
