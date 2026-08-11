@@ -45,6 +45,11 @@ Un petit échantillon prêt à l'emploi pour tester le mode batch est fourni dan
 
 Un notebook central reprennant lles notions principales ainsi que les étapes clés du projet est  disponible dans `docs/notebook/models_overview_analysis.ipynb`. Ce notebook vous permettra de mieux comprendre les concepts derrière ce projets, les motivations des différents chois réalisés et les résultats obtenus.
 
+## Demo live
+
+![Run demo du streamlit](report\screenshots\streamlit_ml_ABSA.gif)
+
+
 ## Structure du dépôt
 
 ```
